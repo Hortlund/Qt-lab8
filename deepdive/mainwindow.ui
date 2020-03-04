@@ -14,7 +14,7 @@
    <string>Electrotest</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -74,12 +74,16 @@
           <item>
            <widget class="QLabel" name="label_3">
             <property name="text">
-             <string>Antal komponenter: </string>
+             <string>Antal komponenter(Max 3): </string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QSpinBox" name="spinBox"/>
+           <widget class="QSpinBox" name="spinBox">
+            <property name="maximum">
+             <number>3</number>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
