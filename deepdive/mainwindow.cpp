@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QInputDialog>
+#include <QDebug>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -16,10 +18,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
     int count = ui->spinBox->value();
-    int comp [3];
+    float comp [3];
     for (int i = 0; i < count ; i++) {
         QString str = QString::number(i + 1);
         comp[i] = QInputDialog::getInt(this, "Component Ohm", "Komponent: " + str );
     }
+   QString res = QString::number(calc_resistance(3, 'S', comp));
+   ui->lineEdit_2->setText(res);
+
 }

@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+extern "C" float calc_resistance(int count, char conn, float *array);
+extern "C" float calc_power_r(float volt, float resistance);
+extern "C" int e_resistance(float orig_resistance, float *res_array );
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

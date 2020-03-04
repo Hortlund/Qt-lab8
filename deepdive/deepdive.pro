@@ -29,3 +29,18 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+unix:!macx: LIBS += -L$$PWD/../../../../../usr/local/lib/ -lcomponent
+
+INCLUDEPATH += $$PWD/../../../../../usr/local/lib
+DEPENDPATH += $$PWD/../../../../../usr/local/lib
+
+unix:!macx: LIBS += -L$$PWD/../../../../../usr/local/lib/ -lresistance
+
+INCLUDEPATH += $$PWD/../../../../../usr/local/lib
+DEPENDPATH += $$PWD/../../../../../usr/local/lib
+
+unix:!macx: LIBS += -L$$PWD/../../../../../usr/local/lib/ -lpower
+
+INCLUDEPATH += $$PWD/../../../../../usr/local/lib
+DEPENDPATH += $$PWD/../../../../../usr/local/lib
