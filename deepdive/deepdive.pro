@@ -30,6 +30,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+#Search path for the extarnal libs thats going to be included
 unix:!macx: LIBS += -L$$PWD/../../../../../usr/local/lib/ -lcomponent
 
 INCLUDEPATH += $$PWD/../../../../../usr/local/lib

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+//Declaring external c functions thats was written as a part of an earlier assignment.
 extern "C" float calc_resistance(int count, char conn, float *array);
 extern "C" float calc_power_r(float volt, float resistance);
 extern "C" int e_resistance(float orig_resistance, float *res_array );
